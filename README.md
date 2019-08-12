@@ -4,7 +4,7 @@ This repository contains the files for the study: the data, R code, and z-Tree f
 It also includes a zBrac compatible treatment file and the language template for easy translation. (To find more information about zBrac [click here](https://www.github.com/seyhunsaral/zbrac)
 
 
-## Glossary for z-Tree File
+## Glossary for z-Tree Files
 | Variable        | Table    | Type      | Description                                                     | 
 |-----------------|----------|-----------|-----------------------------------------------------------------| 
 | IE              | globals  | constant  | Initial Endowment                                               | 
@@ -20,11 +20,11 @@ It also includes a zBrac compatible treatment file and the language template for
 | dbgShouldLeave  | globals  | debugging | Condition to leave stage when debug mode is on                  | 
 | dbgCurrentStage | globals  | debugging | Stage number to be used for skipping to a certain stage         | 
 | FirstPlayer     | subjects | game      | 1 if the player is selected to be the first player, 0 otherwise | 
-| uC              | subjects | game      | unconditional choice of action                                  | 
-| ccL             | subjects | game      | conditional choice of action if the other player chooses L      | 
-| ccM             | subjects | game      | conditional choice of action if the other player chooses M      | 
-| ccH             | subjects | game      | conditional choice of action if the other player chooses H      | 
-| ouc             | subjects | game      | unconditional choice of the opponent                            | 
-| occL            | subjects | game      | conditional choice of the opponent when subject plays L         | 
-| occM            | subjects | game      | conditional choice of the opponent when subject plays M         | 
-| occH            | subjects | game      | conditional choice of the opponent when subject plays H         | 
+| uC              | subjects | game      | choice as the first player                                      | 
+| ccL             | subjects | game      | conditional choice if the other player chooses L (0)            | 
+| ccM             | subjects | game      | conditional choice if the other player chooses M  (50)          | 
+| ccH             | subjects | game      | conditional choice if the other player chooses H  (199)         | 
+| ouc             | subjects | game      | opponent's choice of the opponent                               | 
+| occL            | subjects | game      | opponent's conditional choice for L                             | 
+| occM            | subjects | game      | opponent's conditional choice for M                             | 
+| occH            | subjects | game      | opponent's conditional choice for H                             |
