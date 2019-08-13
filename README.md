@@ -43,26 +43,48 @@ It also includes a zBrac compatible treatment file and the language template for
 
 
 ## Glossary for z-Tree Files
-| Variable        | Table    | Type      | Description                                                     | 
-|-----------------|----------|-----------|-----------------------------------------------------------------| 
-| IE              | globals  | constant  | Initial Endowment                                               | 
-| IEg             | globals  | constant  | Initial Endowment for the beliefs                               | 
-| cL              | globals  | constant  | Low contribution amount                                         | 
-| cM              | globals  | constant  | Medium contribution amount                                      | 
-| cH              | globals  | constant  | High contribution amount                                        | 
-| PeriodSelected  | globals  | constant  | Selected period for payments                                    | 
-| RegularTimeOut  | globals  | constant  | Timeout for stages                                              | 
-| Debug           | globals  | debugging | Debug mode on (1) off (0)                                       | 
-| DebugTimeOut    | globals  | debugging | Timeout when debug mode is on                                   | 
-| dbgFocusOnStage | globals  | debugging | Stage to go directly when debug mode is on                      | 
-| dbgShouldLeave  | globals  | debugging | Condition to leave stage when debug mode is on                  | 
-| dbgCurrentStage | globals  | debugging | Stage number to be used for skipping to a certain stage         | 
-| FirstPlayer     | subjects | game      | 1 if the player is selected to be the first player, 0 otherwise | 
-| uC              | subjects | game      | choice as the first player                                      | 
-| ccL             | subjects | game      | conditional choice if the other player chooses L (0)            | 
-| ccM             | subjects | game      | conditional choice if the other player chooses M  (50)          | 
-| ccH             | subjects | game      | conditional choice if the other player chooses H  (100)         | 
-| ouc             | subjects | game      | opponent's choice of the opponent                               | 
-| occL            | subjects | game      | opponent's conditional choice for L (0)                         | 
-| occM            | subjects | game      | opponent's conditional choice for M (50)                        | 
-| occH            | subjects | game      | opponent's conditional choice for H (100)                       |
+| Variable          | Table    | Type      | Description                                                              |
+|-------------------|----------|-----------|--------------------------------------------------------------------------|
+| IE                | globals  | constant  | Initial Endowment                                                        |
+| IEg               | globals  | constant  | Initial Endowment for the beliefs                                        |
+| cL                | globals  | constant  | Low contribution amount                                                  |
+| cM                | globals  | constant  | Medium contribution amount                                               |
+| cH                | globals  | constant  | High contribution amount                                                 |
+| PeriodSelected    | globals  | constant  | Selected period for payments                                             |
+| RegularTimeOut    | globals  | constant  | Timeout for stages                                                       |
+| Debug             | globals  | debugging | Debug mode on (1) off (0)                                                |
+| DebugTimeOut      | globals  | debugging | Timeout when debug mode is on                                            |
+| dbgFocusOnStage   | globals  | debugging | Stage to go directly when debug mode is on                               |
+| dbgShouldLeave    | globals  | debugging | Condition to leave stage when debug mode is on                           |
+| dbgCurrentStage   | globals  | debugging | Stage number to be used for skipping to a certain stage                  |
+| FirstPlayer       | subjects | game      | 1 if the player is selected to be the first player, 0 otherwise          |
+| uC                | subjects | game      | choice as the first player                                               |
+| ccL               | subjects | game      | conditional choice if the other player chooses L (0)                     |
+| ccM               | subjects | game      | conditional choice if the other player chooses M  (50)                   |
+| ccH               | subjects | game      | conditional choice if the other player chooses H  (100)                  |
+| Action            | subjects | game      | action that was actualized (after the random role assingment)            |
+| opp               | subjects | game      | opponents number                                                         |
+| ouc               | subjects | game      | opponent's choice of the opponent                                        |
+| occL              | subjects | game      | opponent's conditional choice for L (0)                                  |
+| occM              | subjects | game      | opponent's conditional choice for M (50)                                 |
+| occH              | subjects | game      | opponent's conditional choice for H (100)                                |
+| buc_L             | subjects | game      | beliefs - probability opponent plays L in unconditonal choice            |
+| buc_M             | subjects | game      | beliefs - probability opponent plays M in unconditonal choice            |
+| buc_H             | subjects | game      | beliefs - probability opponent plays H in unconditonal choice            |
+| bccL_L            | subjects | game      | beliefs - probability opponent plays L in response to L                  |
+| bccL_M            | subjects | game      | beliefs - probability opponent plays M in response to L                  |
+| bccL_H            | subjects | game      | beliefs - probability opponent plays H in response to L                  |
+| bccM_L            | subjects | game      | beliefs - probability opponent plays L in response to M                  |
+| bccM_M            | subjects | game      | beliefs - probability opponent plays M in response to M                  |
+| bccM_H            | subjects | game      | beliefs - probability opponent plays H in response to M                  |
+| bccH_L            | subjects | game      | beliefs - probability opponent plays L in response to H                  |
+| bccH_M            | subjects | game      | beliefs - probability opponent plays M in response to H                  |
+| bccH_H            | subjects | game      | beliefs - probability opponent plays H in response to H                  |
+| oAction           | subjects | game      | opponent's action that was actualized (after the random role assignment) |
+| EarningKept       | subjects | game      | Earnings from the amount kept                                            |
+| EarningReceived   | subjects | game      | Earnings from the opponent's transfer                                    |
+| EarningGuess      | subjects | game      | Earninns from the expectations period (beliefs)                          |
+| EarningGame       | subjects | game      | Earnings from the decision phase (EarningKept + EarningReceived)         |
+| FinalEarningGame  | subjects | game      | Earnings from the decision phase in the selected period                  |
+| FinalEarningGuess | subjects | game      | Earnings from the expectations phase in the selected period              |
+
