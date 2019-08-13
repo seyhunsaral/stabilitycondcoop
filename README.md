@@ -58,17 +58,8 @@ It also includes a zBrac compatible treatment file and the language template for
  * `3_quest.ztq`: Questionnaire
 
 ## Reproduction 
-* To reproduce the data cleaning process, the script `process_raw_data.R` should be run. For instance in commandline:
-```
-Rscript process_raw_data.R` 
-```
-would recreate the data in `CSV` and `RDS` format.
-
-* To reproduce the figures and tables, the script `main.R` should be run. For instance:
-```
-Rscript main.R
-```
-would print out the tables and create figures in the folder `./figs/`.
+* To reproduce the data cleaning process, the script `process_raw_data.R` should be run. That would recreate the data in `csv` and `rds` folders.
+* To reproduce the figures and tables, the script `main.R` should be run. That would print out the tables and create figures in the folder `figs`.
 
 
 ### My session information and dependencies: `sessionInfo()`
