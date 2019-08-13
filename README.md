@@ -1,7 +1,9 @@
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
-
+## Materials 
 This repository contains the files for the study: the data, R code, and z-Tree files. 
 It also includes a zBrac compatible treatment file and the language template for easy translation. (To find more information about zBrac [click here](https://www.github.com/seyhunsaral/zbrac))
+
+** Usage is permited for scientific and educational purposes only **
 
 ## Files in this repository
 ### code
@@ -50,7 +52,7 @@ would recreate the data in `CSV` and `RDS` format.
 ```
 Rscript main.R
 ```
-would print out the tables and create figures in the folder `./figs`.
+would print out the tables and create figures in the folder `./figs/`.
 
 
 ### My session information and dependencies: `sessionInfo()`
