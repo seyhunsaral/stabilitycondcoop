@@ -3,7 +3,7 @@
 This repository contains the files for the study: the data, R code, and z-Tree files. 
 It also includes a zBrac compatible treatment file and the language template for easy translation. (To find more information about zBrac [click here](https://www.github.com/seyhunsaral/zbrac))
 
-** Usage is permited for scientific and educational purposes only **
+**Usage is permited for scientific and educational purposes only**
 
 ## Files in this repository
 ### code
