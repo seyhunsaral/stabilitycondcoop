@@ -6,24 +6,20 @@ It also includes a zBrac compatible treatment file and the language template for
 **Warning: Usage is permited for scientific and educational purposes only.**
 
 ## Table of Contents
-      * [Repository Contents](#repository-contents)
-         * [code](#code)
-         * [data](#data)
-            * [csv](#csv)
-            * [rawdata](#rawdata)
-            * [rds](#rds)
-         * [figs](#figs)
-         * [ztree](#ztree)
-            * [original-italian](#original-italian)
-      * [Reproduction](#reproduction)
-         * [Session information and dependencies](#my-session-information-and-dependencies-sessioninfo)
-      * [List of variables in the data](#list-of-variables-in-the-data)
-      * [List of variables in z-Tree Files](#list-of-variables-in-z-tree-files)
 
-
-
-
-
+* [Repository Contents](#repository-contents)
+    * [code](#code)
+    * [data](#data)
+    * [csv](#csv)
+    * [rawdata](#rawdata)
+    * [rds](#rds)
+    * [figs](#figs)
+    * [ztree](#ztree)
+    * [original-italian](#original-italian)
+* [Reproduction](#reproduction)
+   * [Session information and dependencies](#my-session-information-and-dependencies-sessioninfo)
+* [List of variables in the data](#list-of-variables-in-the-data)
+* [List of variables in z-Tree Files](#list-of-variables-in-z-tree-files)
 
 ## Repository Contents
 ### code
