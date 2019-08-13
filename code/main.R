@@ -8,7 +8,7 @@
 ##################################################
 
 
-print("Loading packages")
+message("Loading packages")
 library("here")
 library("dplyr")
 library("ggplot2")
@@ -172,8 +172,8 @@ pdf_last_plot("fig_types_treatment", width = 8, height = 4)
 # Table 2 - Stability
 ########################################
 
-print("##########################")
-print("# Table 2 - Stability")
+message("##########################")
+message("# Table 2 - Stability")
 
 
 
@@ -246,17 +246,15 @@ df_stability %>% group_by(first_class_wide_o) %>% count(stb_mode_lasthalf_class_
 
 
 for (i in 1:length(tests[,1])){
-  print("-------------------------")
-  print(tests[i,1])
-  print(tests[i,2])
+
   chisqtest  <-     chisq.test(
     bind_rows(
       d.chi %>% filter(first_class_wide_o==tests[i,1]) %>% ungroup() %>% select(-first_class_wide_o),
       d.chi %>% filter(first_class_wide_o==tests[i,2]) %>% ungroup() %>% select(-first_class_wide_o))
   )
-  print(chisqtest$p.value)
+
   ptable[tests[i,2],tests[i,1]]  <- chisqtest$p.value
-  print("-------------------------")
+
 
   pvalues_df  <- rbind(pvalues_df, data.frame(group1 = tests[i,1], group2 = tests[i,2], p = chisqtest$p.value, y.position = 3))
 }
@@ -264,7 +262,7 @@ for (i in 1:length(tests[,1])){
 
 ptable_rounded  <- round(ptable,4)
 #xtable(ptable_rounded, digits = 4 )
-print(ptable_rounded)
+#print(ptable_rounded)
 
 stability_lasthalf_comparision  <- tbl_contingency_mode_lasthalf[c(1,3,2,4),c(2,1)]  %>% as.matrix()  %>% cbind(ptable_rounded[1:4,1:4])
 
@@ -283,8 +281,8 @@ print(stability_lasthalf_comparision)
 ########################################
 # Table 3  - Decline of Conditional Cooperation
 ########################################
-print("##########################")
-print("# Table 3 - Decline of Conditional Cooperation")
+message("##########################")
+message("# Table 3 - Decline of Conditional Cooperation")
 
 
 ### ----------- Regression isCC
@@ -389,8 +387,8 @@ facet_labels <- c(
 # Table S2  - Beliefs on Cond Types
 ########################################
 
-print("##########################")
-print("# Table S2 - Beliefs on Cond Types")
+message("##########################")
+message("# Table S2 - Beliefs on Cond Types")
 
 
 subjects_regression2  <- subjects  %>%
@@ -429,7 +427,7 @@ screenreg(list(bel_model1,bel_model2,bel_model3))
 action_categories  <- c("uc", "ccL", "ccM", "ccH")
 
 for (action_variable in action_categories) {
-print(action_variable)
+#print(action_variable)
 belief_variable  <- paste0("exp_pay_",action_variable)
 
 subjects  %>%
