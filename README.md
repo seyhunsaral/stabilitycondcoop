@@ -1,11 +1,11 @@
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
-## Materials 
-This repository contains the files for the study: the data, R code, and z-Tree files. 
-It also includes a zBrac compatible treatment file and the language template for easy translation. (For more information about the zBrac project [click here for the project repository](https://www.github.com/seyhunsaral/zbrac))
+## About the repository 
+This repository contains the files used in the study: z-Tree files to run the experiment, data and the R codes for the data analysis. The figures and the tables can be reproduced using the materials here. The repository also contains a `zBrac` compatible treatment file and the language template for easy translation/replication of the xperiment. (For more information about the zBrac project [click here for the project repository](https://www.github.com/seyhunsaral/zbrac))
 
 **Warning: Usage is permited for scientific and educational purposes only.**
 
-## Table of Contents
+[Click here to download this repository](https://github.com/seyhunsaral/stabilitycondcoop/archive/master.zip)
+
 
 * [Repository Contents](#repository-contents)
     * [code](#code)
