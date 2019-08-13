@@ -1,7 +1,7 @@
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
 
 This repository contains the files for the study: the data, R code, and z-Tree files. 
-It also includes a zBrac compatible treatment file and the language template for easy translation. (To find more information about zBrac [click here](https://www.github.com/seyhunsaral/zbrac)
+It also includes a zBrac compatible treatment file and the language template for easy translation. (To find more information about zBrac [click here](https://www.github.com/seyhunsaral/zbrac))
 
 
 ## Glossary for z-Tree Files
