@@ -40,9 +40,78 @@ It also includes a zBrac compatible treatment file and the language template for
  * `3_quest.ztq`: Questionnaire
 
 
+## List of variables in the data 
+
+| Variable                   | Table    | Description                                                                 |
+|----------------------------|----------|-----------------------------------------------------------------------------|
+| treatment                  | subjects | Treatment: `NoCondInfo` or `CondInfo`                                       |
+| session                    | subjects | session number                                                              |
+| period                     | subjects | period number                                                               |
+| subject                    | subjects | subject number                                                              |
+| group                      | subjects | group number                                                                |
+| first_player               | subjects | logical - if the player is selected as the first player                     |
+| uc                         | subjects | choice as the first player                                                  |
+| ccL                        | subjects | conditional choice if the other player chooses L (0)                        |
+| ccM                        | subjects | conditional choice if the other player chooses M  (50)                      |
+| ccH                        | subjects | conditional choice if the other player chooses H  (100)                     |
+| action                     | subjects | action that was actualized (after the random role assingment)               |
+| opp                        | subjects | opponents number                                                            |
+| ouc                        | subjects | opponent's choice of the opponent                                           |
+| occL                       | subjects | opponent's conditional choice for L (0)                                     |
+| occM                       | subjects | opponent's conditional choice for M (50)                                    |
+| occH                       | subjects | opponent's conditional choice for H (100)                                   |
+| buc_L                      | subjects | beliefs - probability opponent plays L in unconditonal choice               |
+| buc_M                      | subjects | beliefs - probability opponent plays M in unconditonal choice               |
+| buc_H                      | subjects | beliefs - probability opponent plays H in unconditonal choice               |
+| bccL_L                     | subjects | beliefs - probability opponent plays L in response to L                     |
+| bccL_M                     | subjects | beliefs - probability opponent plays M in response to L                     |
+| bccL_H                     | subjects | beliefs - probability opponent plays H in response to L                     |
+| bccM_L                     | subjects | beliefs - probability opponent plays L in response to M                     |
+| bccM_M                     | subjects | beliefs - probability opponent plays M in response to M                     |
+| bccM_H                     | subjects | beliefs - probability opponent plays H in response to M                     |
+| bccH_L                     | subjects | beliefs - probability opponent plays L in response to H                     |
+| bccH_M                     | subjects | beliefs - probability opponent plays M in response to H                     |
+| bccH_H                     | subjects | beliefs - probability opponent plays H in response to H                     |
+| opp_action                 | subjects | opponent's action that was actualized (after the random role assignment)    |
+| earning_kept               | subjects | Earnings from the amount kept                                               |
+| earning_received           | subjects | Earnings from the opponent's transfer                                       |
+| earning_guess              | subjects | Earninns from the expectations period (beliefs)                             |
+| earning_game               | subjects | Earnings from the decision phase (EarningKept + EarningReceived)            |
+| ucf                        | subjects | Factorized letter form of uc                                                |
+| ccLf                       | subjects | Factorized letter form of ccL                                               |
+| ccMf                       | subjects | Factorized letter form of ccM                                               |
+| ccHf                       | subjects | Factorized letter form of ccH                                               |
+| oucf                       | subjects | Factorized letter form of ouc                                               |
+| occLf                      | subjects | Factorized letter form of occL                                              |
+| occMf                      | subjects | Factorized letter form of occM                                              |
+| occHf                      | subjects | Factorized letter form of occH                                              |
+| subject_unq                | subjects | Unique subject number                                                       |
+| session_unq                | subjects | Unique session number                                                       |
+| opp_unq                    | subjects | Unique subject number of the opponent                                       |
+| cond_type                  | subjects | Conditional type number (base 10 conversion of base 3 letters)              |
+| opp_cond_type              | subjects | Conditional type number of the opponent                                     |
+| cond_class_wide            | subjects | Conditional type classification (wide classification)                       |
+| cond_class_wide_o          | subjects | Conditional type classification (wide classification with `other`)          |
+| cond_class_narrow          | subjects | Conditional type classification (narrow classification)                     |
+| opp_cond_class_wide        | subjects | Opponent's conditional type classification (wide classification)            |
+| opp_cond_class_wide_o      | subjects | Opponent's conditional type classifcation (wide classification with `other` |
+| opp_cond_class_narrow      | subjects | Opponent's conditional type classification (narrow classifcation)           |
+| exp_pay_uc                 | subjects | Expected payoff from the opponents move as the first player                 |
+| exp_pay_ccL                | subjects | Expected payoff from the opponents respone to L                             |
+| exp_pay_ccM                | subjects | Expected payoff from the opponents respone to M                             |
+| exp_pay_ccH                | subjects | Expected payoff from the opponents respone to H                             |
+| opp_action_lag1            | subjects | Action of the previous opponent in the previous period (lagged variable)    |
+| opp_cond_type_lag1         | subjects | Type of the previous opponent in the previous period (lagged variable)      |
+| opp_cond_class_wide_lag1   | subjects | see `opp_cond_class_wide` (lagged variable)                                 |
+| opp_cond_class_wide_o_lag1 | subjects | see `opp_cond_class_wide_o` (lagged variable)                               |
+| opp_cond_class_narrow_lag1 | subjects | see `opp_cond_class_narrow` (lagged variable)                               |
+| first_player_lag1          | subjects | logical - if first player in the previous period (lagged variable)          |
+| isCC                       | subjects | logical - if conditional cooperator                                         |
+| isS                        | subjects | logical - if selfish                                                        |
+| isHS                       | subjects | logical - if hump-shaped                                                    |
 
 
-## Glossary for z-Tree Files
+## List of variables in z-Tree Files
 | Variable          | Table    | Type      | Description                                                              |
 |-------------------|----------|-----------|--------------------------------------------------------------------------|
 | IE                | globals  | constant  | Initial Endowment                                                        |
@@ -58,7 +127,7 @@ It also includes a zBrac compatible treatment file and the language template for
 | dbgShouldLeave    | globals  | debugging | Condition to leave stage when debug mode is on                           |
 | dbgCurrentStage   | globals  | debugging | Stage number to be used for skipping to a certain stage                  |
 | FirstPlayer       | subjects | game      | 1 if the player is selected to be the first player, 0 otherwise          |
-| uC                | subjects | game      | choice as the first player                                               |
+| uc                | subjects | game      | choice as the first player                                               |
 | ccL               | subjects | game      | conditional choice if the other player chooses L (0)                     |
 | ccM               | subjects | game      | conditional choice if the other player chooses M  (50)                   |
 | ccH               | subjects | game      | conditional choice if the other player chooses H  (100)                  |
