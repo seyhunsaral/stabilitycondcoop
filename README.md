@@ -39,6 +39,44 @@ It also includes a zBrac compatible treatment file and the language template for
  * `2_condcoop.ztt`: Experiment
  * `3_quest.ztq`: Questionnaire
 
+## How to reproduce the figures?
+* To replicate the cleaning `process_raw_data.R` should be run with R. For instance in commandline:
+```
+Rscript process_raw_data.R` 
+
+```
+
+
+### My session information and dependencies: `sessionInfo()`
+
+
+```
+R version 3.6.1 (2019-07-05)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 18.04.2 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] zTree_1.0.6      ggalluvial_0.9.1 optimx_2018-7.10 nnet_7.3-12     
+ [5] xtable_1.8-4     texreg_1.36.23   lmerTest_3.1-0   lme4_1.1-21     
+ [9] Matrix_1.2-17    gmodels_2.18.1   purrr_0.3.2      forcats_0.4.0   
+[13] ggrepel_0.8.1    vipor_0.4.5      stringr_1.4.0    tidyr_0.8.3     
+[17] ggplot2_3.2.0    dplyr_0.8.1      here_0.1
+```
 
 ## List of variables in the data 
 
