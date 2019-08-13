@@ -5,7 +5,27 @@ It also includes a zBrac compatible treatment file and the language template for
 
 **Warning: Usage is permited for scientific and educational purposes only.**
 
-## Files in this repository
+## Table of Contents
+      * [Repository Contents](#repository-contents)
+         * [code](#code)
+         * [data](#data)
+            * [csv](#csv)
+            * [rawdata](#rawdata)
+            * [rds](#rds)
+         * [figs](#figs)
+         * [ztree](#ztree)
+            * [original-italian](#original-italian)
+      * [Reproduction](#reproduction)
+         * [Session information and dependencies](#my-session-information-and-dependencies-sessioninfo)
+      * [List of variables in the data](#list-of-variables-in-the-data)
+      * [List of variables in z-Tree Files](#list-of-variables-in-z-tree-files)
+
+
+
+
+
+
+## Repository Contents
 ### code
  * `functions.R` : Contains functions that is used in other files 
  * `main.R` : This file reproduces figures and the tables in the paper.
@@ -201,4 +221,5 @@ other attached packages:
 | EarningGame       | subjects | game      | Earnings from the decision phase (EarningKept + EarningReceived)         |
 | FinalEarningGame  | subjects | game      | Earnings from the decision phase in the selected period                  |
 | FinalEarningGuess | subjects | game      | Earnings from the expectations phase in the selected period              |
+
 
