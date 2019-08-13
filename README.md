@@ -35,9 +35,9 @@ It also includes a zBrac compatible treatment file and the language template for
  * `condcoop_zbrac.txt`: `zBrac` source file. It can be used to generate treatment files in different languages.
  #### original-italian
  Contains original z-Tree files in Italian Language
- * `1_control_questions.ztt` 
- * `2_condcoop.ztt`
- * `3_quest.ztq`
+ * `1_control_questions.ztt` : Control questions
+ * `2_condcoop.ztt`: Experiment
+ * `3_quest.ztq`: Questionnaire
 
 
 
