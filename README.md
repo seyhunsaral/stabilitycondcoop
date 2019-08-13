@@ -23,8 +23,8 @@ It also includes a zBrac compatible treatment file and the language template for
 | uC              | subjects | game      | choice as the first player                                      | 
 | ccL             | subjects | game      | conditional choice if the other player chooses L (0)            | 
 | ccM             | subjects | game      | conditional choice if the other player chooses M  (50)          | 
-| ccH             | subjects | game      | conditional choice if the other player chooses H  (199)         | 
+| ccH             | subjects | game      | conditional choice if the other player chooses H  (100)         | 
 | ouc             | subjects | game      | opponent's choice of the opponent                               | 
-| occL            | subjects | game      | opponent's conditional choice for L                             | 
-| occM            | subjects | game      | opponent's conditional choice for M                             | 
-| occH            | subjects | game      | opponent's conditional choice for H                             |
+| occL            | subjects | game      | opponent's conditional choice for L (0)                         | 
+| occM            | subjects | game      | opponent's conditional choice for M (50)                        | 
+| occH            | subjects | game      | opponent's conditional choice for H (100)                       |
