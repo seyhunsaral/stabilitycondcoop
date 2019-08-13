@@ -172,6 +172,11 @@ pdf_last_plot("fig_types_treatment", width = 8, height = 4)
 # Table 2 - Stability
 ########################################
 
+print("##########################")
+print("# Table 2 - Stability")
+
+
+
 # Calculating stability measures and saving in a separate df
 # We calculated stability in several methods
 # The simple method in the paper is mode_lasthalf
@@ -258,7 +263,7 @@ for (i in 1:length(tests[,1])){
 
 
 ptable_rounded  <- round(ptable,4)
-xtable(ptable_rounded, digits = 4 )
+#xtable(ptable_rounded, digits = 4 )
 print(ptable_rounded)
 
 stability_lasthalf_comparision  <- tbl_contingency_mode_lasthalf[c(1,3,2,4),c(2,1)]  %>% as.matrix()  %>% cbind(ptable_rounded[1:4,1:4])
@@ -278,6 +283,9 @@ print(stability_lasthalf_comparision)
 ########################################
 # Table 3  - Decline of Conditional Cooperation
 ########################################
+print("##########################")
+print("# Table 3 - Decline of Conditional Cooperation")
+
 
 ### ----------- Regression isCC
 
@@ -380,6 +388,10 @@ facet_labels <- c(
 ########################################
 # Table S2  - Beliefs on Cond Types
 ########################################
+
+print("##########################")
+print("# Table S2 - Beliefs on Cond Types")
+
 
 subjects_regression2  <- subjects  %>%
   mutate(bel_uc = exp_pay_uc/300, bel_ccL = exp_pay_ccL/300, bel_ccM = exp_pay_ccM/300, bel_ccH = exp_pay_ccH/300, opp_action_resc = opp_action_lag1/100)  
