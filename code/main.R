@@ -1,3 +1,13 @@
+##################################################
+
+# The Stability of Conditional Cooperation
+# Andreozzi, Ploner, Saral
+
+# For inquiries, please write to Ali Seyhun Saral (www.saral.it)
+
+##################################################
+
+
 print("Loading packages")
 library("here")
 library("dplyr")
@@ -173,10 +183,6 @@ df_stability  <- subjects  %>%
     first_class_wide = get_first(cond_class_wide),
     first_class_wide_o = get_first(cond_class_wide_o),
     first_class_narrow = get_first(cond_class_narrow),
-    #mode_type  = get_mode(cond_type),
-    #mode_class_wide = get_mode(cond_class_wide),
-    #mode_class_narrow = get_mode(cond_class_narrow),
-    #mode_class_wide_o = get_mode(cond_class_wide_o),
     # Stability measure for types
     stb_psi_type =measure_stability(cond_type,method = "psi"),
     stb_and_type =measure_stability(cond_type,method = "andreozzi"),
@@ -220,7 +226,6 @@ tests <- rbind(
                 c("selfish","perf-cond-coop"),
                 c("selfish","humped"),
                 c("selfish","other"),
-               # c("imp-cond-coop","perf-cond-coop"),
                 c("imp-cond-coop","humped"),
                 c("imp-cond-coop","other"),
                 c("perf-cond-coop","imp-cond-coop"),
@@ -263,7 +268,7 @@ rownames(stability_lasthalf_comparision)  <- c("Selfish", "Perf. Cond. Coop", "I
 colnames(stability_lasthalf_comparision)  <- c( "Stable", "Unstable", "Selfish", "Perf. Cond.", "Imp. Cond.", "Humped")
 
 
-xtable(stability_lasthalf_comparision, digits = 3)
+##xtable(stability_lasthalf_comparision, digits = 3)
 print(stability_lasthalf_comparision)
 
 
@@ -283,7 +288,6 @@ subjects_regression  <-  subjects  %>%
           exp_pay_ccM_norm = exp_pay_ccM / 300,
           exp_pay_ccH_norm = exp_pay_ccH / 300,
           observed_opp_cond_class = if_else(treatment == "CondInfo" & first_player_lag1 == "1", as.character(opp_cond_class_narrow_lag1), as.character("not-observed")),
-#          observed_opp_cond_class = as.fact
           observed_opp_cond_class = relevel(factor(observed_opp_cond_class,
                                                    levels = c("not-observed", "cond-coop", "selfish", "humped", "other")), ref = "not-observed")
 )
@@ -297,8 +301,8 @@ models_table  <- list(reg_iscc_model1, reg_iscc_model2)
 
 
 
-texreg(models_table, single.row = TRUE,
-       custom.coef.names = c(NA, "Period","Treatment \\textit{CondInfo}","Period:Treatment \\textit{CondInfo}"))
+# texreg(models_table, single.row = TRUE,
+#       custom.coef.names = c(NA, "Period","Treatment \\textit{CondInfo}","Period:Treatment \\textit{CondInfo}"))
 
 screenreg(models_table)
 ####----------------------------------
@@ -322,7 +326,6 @@ subjects  %>%
   gather(response_to, choice, -subject_unq, -period, -treatment)  %>%
   mutate( response_to = factor(response_to, levels =  c("ucf", "ccLf", "ccMf", "ccHf")))  %>%
   mutate( choice = factor(choice, levels = c("H", "M", "L")))  %>%
-  #  mutate( response_to = fct_recode(response_to, First Move = "ucf", ))  %>%
   ggplot(
     aes(x = period, fill = choice)) +
   geom_bar(position = "fill") +
@@ -345,9 +348,6 @@ pdf_last_plot("actions_by_period", width = 9, height = 3)
 # Below is the trick for rearranging the positions.
 new_levels  <- c("selfish", "perf-cond-coop", "imp-cond-coop", "humped", "other")
 new_level_indexes  <- match(new_levels,get_label_table(classification = "wide_o")[,"shortname"])
-#colors_rearranged  <- get_label_table(classification = "wide_o")[,"color"][new_order]
-#labels_rearranged  <- get_label_table(classification = "wide_o")[,"longname"]#[new_order]
-
 
 subjects  %>%
   ggplot(
@@ -393,16 +393,17 @@ models2  <- list(bel_model1,bel_model2,bel_model3)
 
 screenreg(list(bel_model1,bel_model2,bel_model3))
 
-texreg(models2, single.row = TRUE,
-       custom.coef.names = c(
-           NA,
-           "Period",
-           "Treatment \\textit{CondInfo}",
-           "Belief - Unconditional",
-           "Belief - Response to L",
-           "Belief - Response to M",
-           "Belief - Response to H"
-       ), custom.model.names = c("isCondCoop","isSelfish","isHumpShaped"))
+
+#texreg(models2, single.row = TRUE,
+#       custom.coef.names = c(
+#           NA,
+#           "Period",
+#           "Treatment \\textit{CondInfo}",
+#           "Belief - Unconditional",
+#           "Belief - Response to L",
+#           "Belief - Response to M",
+#           "Belief - Response to H"
+#       ), custom.model.names = c("isCondCoop","isSelfish","isHumpShaped"))
 
 #-------------------------------------
 
@@ -417,7 +418,6 @@ action_categories  <- c("uc", "ccL", "ccM", "ccH")
 
 for (action_variable in action_categories) {
 print(action_variable)
-#action_variable  <- action_categories[[1]]
 belief_variable  <- paste0("exp_pay_",action_variable)
 
 subjects  %>%
@@ -435,7 +435,6 @@ subjects  %>%
   scale_y_continuous("Average Transfer/Average Expected Transfer",breaks=seq(0,100,25), limits = c(0,100)) +
   theme(legend.title=element_blank()) +
   theme(legend.text=element_text(size=7))+
-  #coord_fixed(ratio=1/8) +
   theme(legend.text=element_text(size=12),
   panel.grid.major = element_blank(),
   panel.grid.minor = element_blank())
@@ -443,9 +442,3 @@ subjects  %>%
 pdf_last_plot(paste0("beliefs_",action_variable), width = 8, height = 5)
 }
 #------------------------------------------------
-
-
-
-
-  
-  
