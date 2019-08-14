@@ -9,6 +9,7 @@ This repository contains the files used in the study: z-Tree files to run the ex
 [Click here to download this repository](https://github.com/seyhunsaral/stabilitycondcoop/archive/master.zip)
 
 
+#### Index of README
 
 * [Repository Contents](#repository-contents)
     * [code](#code)
