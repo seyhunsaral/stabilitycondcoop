@@ -62,9 +62,15 @@ This repository contains the files used in the study: z-Tree files to run the ex
  * `3_quest.ztq`: Questionnaire
 
 ## Reproduction 
-* To reproduce the data cleaning process, the script `process_raw_data.R` should be run. That would recreate the data in `csv` and `rds` folders.
 * To reproduce the figures and tables, the script `main.R` should be run. That would print out the tables and create figures in the folder `figs`.
 
+* To reproduce the data cleaning process, the script `process_raw_data.R` should be run. That would recreate the data in `csv` and `rds` folders.
+
+In many systems it can be done through the command line as following after R and the dependencies are installed.
+```
+Rscript process_raw_data.R
+Rscript main.R 
+```
 
 ### My session information and dependencies: `sessionInfo()`
 
