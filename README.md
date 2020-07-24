@@ -1,4 +1,5 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+[![DOI](https://zenodo.org/badge/202017365.svg)](https://zenodo.org/badge/latestdoi/202017365)
 
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
 ## About this repository 
