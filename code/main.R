@@ -28,12 +28,14 @@ library("nnet")
 library("optimx")
 library("ggalluvial")
 
-# Getting working directory
+# Finding the working directory automatically
+#(It should find the top directory of the repository)
+
 dir_proj <- here::here()
 setwd(dir_proj)
 cat('Working directory is:', getwd(), "\n")
 
-# Loading functions
+# Loading functions from functions.R
 source(file.path(".","code","functions.R"))
 
 # Loading data
@@ -57,12 +59,12 @@ theme_set(theme_paper)
 
 
 # Getting common parameters
-# These are generally useful for plot parameters
+# These are useful for plot parameters
 periods_range  <- range(subjects$period)
 periods_seq  <- sort(unique(subjects$period))
 number_of_subjects  <- length(unique(subjects$subject_unq))
 
-#this is used to convert counts to frequencies in plots
+# This function is used to convert counts to frequencies in plots
 axis_formatter  <- function(x) {round(x/number_of_subjects,digits=2)}
 
 
@@ -108,6 +110,7 @@ pdf_last_plot("fig_average_earnings")
 # Figure 3 - Conditoinal Classifications over Periods
 ########################################
 
+# This is to obtain the right order on the plot
 new_levels  <- c("selfish", "perf-cond-coop", "imp-cond-coop", "humped", "other")
 new_level_indexes  <- match(new_levels,get_label_table(classification = "wide_o")[,"shortname"])
 
@@ -173,7 +176,7 @@ pdf_last_plot("fig_types_treatment", width = 8, height = 4)
 ########################################
 
 message("##########################")
-message("# Table 2 - Stability")
+message("# Table 1 - Stability")
 
 
 
@@ -213,14 +216,14 @@ df_stability  <- subjects  %>%
 
 
 ####
-# Table 2 Left Side Contingency
+# Table 1 Left Side: Contingency
 ####
 
 tbl_contingency_mode_lasthalf  <- table(df_stability$first_class_wide_o, df_stability$stb_mode_lasthalf_class_wide)
 
 
 ####
-# Table 2 Right Side, Comparision
+# Table 1 Right Side: Comparision
 ####
 pvalues_df  <- data.frame()
 types  <- c("selfish","perf-cond-coop","imp-cond-coop","humped","other")
@@ -246,7 +249,8 @@ df_stability %>% group_by(first_class_wide_o) %>% count(stb_mode_lasthalf_class_
 
 
 for (i in 1:length(tests[,1])){
-
+# Here we use the standard chi-square test. It gives warning as the sample size is low. One can also simulate p values by adding the simulate.p.value = TRUE
+  
   chisqtest  <-     chisq.test(
     bind_rows(
       d.chi %>% filter(first_class_wide_o==tests[i,1]) %>% ungroup() %>% select(-first_class_wide_o),
@@ -279,7 +283,7 @@ print(stability_lasthalf_comparision)
 
 
 ########################################
-# Table 3  - Decline of Conditional Cooperation
+# Table 2  - Decline of Conditional Cooperation
 ########################################
 message("##########################")
 message("# Table 3 - Decline of Conditional Cooperation")
@@ -316,7 +320,7 @@ screenreg(models_table)
 
 
 ########################################
-# Figure S2  - Summary
+# SI - Figure 2  - Summary
 ########################################
 
 facet_labels <- c(
@@ -347,7 +351,7 @@ pdf_last_plot("actions_by_period", width = 9, height = 3)
 
 
 ########################################
-# Fig  S3  - Sankey Plot of Conditional Classification
+# SI Fig. 3  - Sankey Plot of Conditional Classification
 ########################################
 
 
