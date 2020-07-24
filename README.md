@@ -1,6 +1,10 @@
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
 ## About this repository 
-This repository contains the supplementary files for the study "[The Stability of The Conditional Cooperation](https://www.coll.mpg.de/129014/2019_12online.pdf)": z-Tree files to run the experiment, the data, and the R codes for the data analysis. The figures and the tables can be reproduced using the scripts here. The repository also contains a `zBrac` compatible treatment file and the language template for easy translation/replication of the experiment. (For more information about the zBrac project [click here for the project repository](https://www.github.com/seyhunsaral/zbrac))
+This repository contains the supplementary files for the study:
+
+Andreozzi, Luciano, Matteo Ploner, and Ali Seyhun Saral. "The Stability of Conditional Cooperation: Beliefs Alone Cannot Explain the Decline of Cooperation in Social Dilemmas"
+
+The reposiotory contains z-Tree files to run the experiment, the data, and the R codes for the data analysis. The figures and the tables can be reproduced using the scripts in the repository. The repository also contains a `zBrac` compatible treatment file and the language template for easy translation/replication of the experiment. (For more information about the zBrac project [click here for the project repository](https://www.github.com/seyhunsaral/zbrac))
 
 
 [Click here to download this repository](https://github.com/seyhunsaral/stabilitycondcoop/archive/master.zip)
