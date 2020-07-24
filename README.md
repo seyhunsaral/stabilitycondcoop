@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 # The Stability of Conditional Cooperation (Andreozzi, Ploner, Saral) 
 ## About this repository 
 This repository contains the supplementary files for the study:
