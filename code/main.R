@@ -299,9 +299,9 @@ subjects_regression  <-  subjects  %>%
 )
 
 
-reg_iscc_model1 <- glmer( formula = isCC ~  period + treatment + (1 | subject_unq), family=binomial, data = subjects_regression)
-reg_iscc_model1_nlminb <- glmer( formula = isCC ~  period + treatment + (1 | subject_unq), family=binomial, data = subjects_regression, glmerControl(optimizer ='optimx', optCtrl=list(method='nlminb')))
-reg_iscc_model2 <- glmer( formula = isCC  ~  period * treatment + (1 | subject_unq), family=binomial, data = subjects_regression)
+reg_iscc_model1 <- glmer( formula = isCC ~  period + treatment + (1 | subject_unq) + (1 | session_unq), family=binomial, data = subjects_regression)
+reg_iscc_model1_nlminb <- glmer( formula = isCC ~  period + treatment + (1 | subject_unq) + (1 | session_unq), family=binomial, data = subjects_regression, glmerControl(optimizer ='optimx', optCtrl=list(method='nlminb')))
+reg_iscc_model2 <- glmer( formula = isCC  ~  period * treatment + (1 | subject_unq) + (1 | session_unq), family=binomial, data = subjects_regression)
 
 models_table  <- list(reg_iscc_model1, reg_iscc_model2)
 
