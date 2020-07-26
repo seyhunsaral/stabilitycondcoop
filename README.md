@@ -10,7 +10,7 @@ Andreozzi, Luciano, Matteo Ploner, and Ali Seyhun Saral. "The Stability of Condi
 
 The reposiotory contains z-Tree files to run the experiment, the data, and the R codes for the data analysis. The figures and the tables can be reproduced using the scripts in the repository. The repository also contains a `zBrac` compatible treatment file and the language template for easy translation/replication of the experiment. (For more information about the zBrac project [click here for the project repository](https://www.github.com/seyhunsaral/zbrac))
 
-The data (`/data`) are licensed under Creative Commons Attribution 4.0 international license, and z-Tree (`/ztree`) and R codes(`/code`) are licensed under MIT license. See the [LICENSE](LICENSE) file for the license details.
+The data (`/data`) are licensed under Creative Commons Attribution 4.0 international license. The files contain z-Tree (`/ztree`) and R codes(`/code`) are licensed under MIT license. See the [LICENSE](LICENSE) file for the license details.
 
 [Click here to download this repository](https://github.com/seyhunsaral/stabilitycondcoop/archive/master.zip)
 
